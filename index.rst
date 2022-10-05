@@ -38,4 +38,3 @@ architecture ...
    roadmap/roadmap.rst
    contribute/index.rst
    about/index.rst
-   about/robots.rst

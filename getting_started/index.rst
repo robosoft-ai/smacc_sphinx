@@ -15,7 +15,7 @@ and navigating a simulated Turtlebot 3 in the Gazebo simulator.
 Installation
 ************
 
-1. Install the `ROS 2 binary packages`_ as described in the official docs
+1. Install the ROS 2 binary packages as described in the official docs
 2. Install the |PN| packages using your operating system's package manager:
 
    .. code-block:: bash
@@ -37,5 +37,3 @@ Running the Example
 
    .. code-block:: bash
       ros2 launch sm_atomic sm_atomic_launch.py
-
-   
