@@ -7,10 +7,6 @@ Creating a simple state machine
 - `Requirements`_
 - `Tutorial Steps`_
 
-.. image:: images/smoothing_path.png
-    :width: 60%
-    :align: center
-
 Overview
 ========
 
