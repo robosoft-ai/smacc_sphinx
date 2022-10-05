@@ -33,6 +33,7 @@ architecture ...
    getting_started/index.rst
    build_instructions/index.rst
    concepts/index.rst
+   migration/index.rst
    tutorials/index.rst
    configuration/index.rst
    roadmap/roadmap.rst
