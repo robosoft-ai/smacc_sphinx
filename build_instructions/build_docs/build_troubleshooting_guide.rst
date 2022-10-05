@@ -4,7 +4,7 @@ Build Troubleshooting Guide
 **********************************************
 
 Common SMACC2 Dependencies Build Failures
-=======================================
+=========================================
 
 * Make sure that .bashrc file has no ROS environment variables in it. Open new terminals and try to build the packages again.
 
