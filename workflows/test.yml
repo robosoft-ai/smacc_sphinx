@@ -1,0 +1,30 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies with pip
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          apt update
+          apt install make -y
+          apt install doxygen -y
+          apt install graphviz -y
+          apt install ttf-dejavu -y
+          apt install openjdk-8-jre -y
+          apt install bash git openssh-server -y
+          apt install python3-pip python3 -y
+          pip3 install sphinx==3.5.0 docutils==0.14 sphinx_rtd_theme breathe==4.28.0 sphinxcontrib-plantuml jinja2==3.0.3
+          pip install --no-warn-script-location --user --upgrade -r requirements.txt
+          make html
+          make test
