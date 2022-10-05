@@ -20,5 +20,8 @@ jobs:
           sudo apt install -y make doxygen graphviz ttf-dejavu openjdk-8-jre git openssh-server python3-pip python3
           pip3 install sphinx==3.5.0 docutils==0.14 sphinx_rtd_theme breathe==4.28.0 sphinxcontrib-plantuml jinja2==3.0.3
           pip install --no-warn-script-location --user --upgrade -r requirements.txt
+          
+      - name: Building documentation
+        run: |
           make html
           make test
