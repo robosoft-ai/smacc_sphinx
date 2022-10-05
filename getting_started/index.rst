@@ -36,4 +36,5 @@ Running the Example
 3. In the same terminal, run
 
    .. code-block:: bash
+      
       ros2 launch sm_atomic sm_atomic_launch.py
