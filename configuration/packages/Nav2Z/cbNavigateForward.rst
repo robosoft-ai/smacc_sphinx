@@ -11,11 +11,11 @@ Configuration options
 
 :``<CbNavigateForward>``.forwardDistance:
 
-  ==== =======
-  Type Default                                                   
-  ---- -------
+  ====== =======
+  Type   Default                                                   
+  ------ -------
   double 0.55            
-  ==== =======
+  ====== =======
 
   Description
     Distance to move forward

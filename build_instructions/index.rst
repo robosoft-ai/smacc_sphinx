@@ -35,7 +35,7 @@ Note: ``<ros2-distro>-devel`` was the branch naming schema pre-``galactic``.
 For Galactic and newer, it is simply ``<ros2-distro>``.
 
 Build SMACC2
-----------
+------------
 
 We're going to create a new workspace, ``smacc2_ws``, clone our SMACC2 branch into it, and build.
 ``rosdep`` will be used to get the dependency binaries for SMACC2 in your specific distribution.
@@ -65,7 +65,7 @@ Build or install ROS 2 ``rolling`` using the `build instructions <https://docs.r
 All development is done using the ``rolling`` distribution on SMACC2's ``main`` branch and cherry-picked over to released distributions during syncs (if ABI compatible).
 
 Build SMACC2 Main
----------------
+-----------------
 
 Now that ROS 2 ``rolling`` is installed, we have to install our dependencies and build SMACC2 itself. 
 We'll create a new workspace, ``smacc2_ws`` and clone the SMACC2 project into it.
