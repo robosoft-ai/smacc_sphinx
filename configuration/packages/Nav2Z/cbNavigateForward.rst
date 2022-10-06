@@ -7,7 +7,7 @@ CbNavigateForward
 
 
 Configuration options
------------
+---------------------
 
 :``<CbNavigateForward>``.forwardDistance:
 

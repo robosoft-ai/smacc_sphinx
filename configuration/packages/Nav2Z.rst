@@ -9,4 +9,4 @@ the best navigation performance.
 .. toctree::
    :maxdepth: 1
 
-   Nav2Z/CbNavigateForward.rst
+   Nav2Z/cbNavigateForward.rst

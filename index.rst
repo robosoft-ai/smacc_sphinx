@@ -33,16 +33,9 @@ architecture ...
    getting_started/index.rst
    build_instructions/index.rst
    concepts/index.rst
-   setup_guides/index.rst
    tutorials/index.rst
-   plugin_tutorials/index.rst
    configuration/index.rst
-   tuning/index.rst
-   behavior_trees/index.rst
-   plugins/index.rst
    migration/index.rst
-   commander_api/index.rst
    roadmap/roadmap.rst
    contribute/index.rst
    about/index.rst
-   about/robots.rst
