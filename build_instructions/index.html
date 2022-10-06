@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build and Install &mdash; SMACC 2 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/smacc2_48x48.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build Troubleshooting Guide" href="build_docs/build_troubleshooting_guide.html" />
+    <link rel="prev" title="Getting Started" href="../getting_started/index.html" />
+
+<link rel="stylesheet" href="../_static/tcs_theme.css" type="text/css" />
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> SMACC 2
+            <img src="../_static/smacc2_logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#running-the-example">Running the Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build">Build</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-released-distributions">For Released Distributions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-ros">Install ROS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-smacc2">Build SMACC2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#for-main-branch-development">For Main Branch Development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#build-ros-2-main">Build ROS 2 Main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-smacc2-main">Build SMACC2 Main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-docker-container">Building Docker Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-dockerhub-container">Using DockerHub Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generate-doxygen">Generate Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help">Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build_docs/build_troubleshooting_guide.html">Build Troubleshooting Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="build_docs/build_troubleshooting_guide.html#common-smacc2-dependencies-build-failures">Common SMACC2 Dependencies Build Failures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build_docs/build_troubleshooting_guide.html#reporting-issue">Reporting Issue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">SMACC2 Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html#states">States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html#clients">Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html#client-behaviors">Client Behaviors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html#orthogonals">Orthogonals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migration Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../migration/Foxy.html">Foxy to Galactic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../migration/Foxy.html#updates-in-nav2z">Updates in Nav2Z</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/Galactic.html">Galactic to Humble</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../migration/Galactic.html#updates-in-nav2z">Updates in Nav2Z</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">General Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html">Creating a simple state machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html#tutorial-steps">Tutorial Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html#step-0">0- step 0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/docs/simple_state_machine.html#step-1">1- step 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/packages/Nav2Z.html">Configuration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/packages/Nav2Z/cbNavigateForward.html">CbNavigateForward</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/packages/Nav2Z/cbNavigateForward.html#configuration-options">Configuration options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/packages/Nav2Z/cbNavigateForward.html#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/packages/MoveGroupClient.html">Configuration Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/roadmap.html">Humble Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Getting Involved</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/index.html#id1">Getting Involved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/index.html#process">Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/index.html#licensing">Licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/index.html#developer-certification-of-origin-dco">Developer Certification of Origin (DCO)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About and Contact</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#id1">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#contact">Contact</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SMACC 2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+
+<span style="float: right;" >
+    <a class="github-button" href="https://github.com/robosoft-ai/SMACC2_Documentation_II" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Edit robosoft-ai/SMACC2_Documentation_II on GitHub" ">Edit</a>
+</span>
+
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Build and Install</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="build-and-install">
+<span id="build-instructions"></span><h1>Build and Install<a class="headerlink" href="#build-and-install" title="Permalink to this heading"></a></h1>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this heading"></a></h2>
+<p>SMACC2 and its dependencies are released as binaries.
+You may install it via the following to get the latest stable released version:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-&lt;distro&gt;-smacc2</span></code></p>
+</div></blockquote>
+<p>(For Ubuntu 20.04 use this command as the parsing of wildcards have been changed:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ros-&lt;distro&gt;-smacc2</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="build">
+<h2>Build<a class="headerlink" href="#build" title="Permalink to this heading"></a></h2>
+<p>There are 3 ways to build SMACC2.
+Building for a specific released distribution (e.g. <code class="docutils literal notranslate"><span class="pre">foxy</span></code>, <code class="docutils literal notranslate"><span class="pre">galactic</span></code>), build SMACC2 on main branch using a quickstart setup script, or building main branch manually.</p>
+<div class="content-collapse section" id="for-released-distributions">
+<h3>For Released Distributions<a class="headerlink" href="#for-released-distributions" title="Permalink to this heading"></a></h3>
+<div class="section" id="install-ros">
+<h4>Install ROS<a class="headerlink" href="#install-ros" title="Permalink to this heading"></a></h4>
+<p>Please install ROS 2 via the usual <a class="reference external" href="https://docs.ros.org/en/rolling/Installation/Ubuntu-Install-Binary.html">install instructions</a> for your desired distribution.
+Note: <code class="docutils literal notranslate"><span class="pre">&lt;ros2-distro&gt;-devel</span></code> was the branch naming schema pre-<code class="docutils literal notranslate"><span class="pre">galactic</span></code>.
+For Galactic and newer, it is simply <code class="docutils literal notranslate"><span class="pre">&lt;ros2-distro&gt;</span></code>.</p>
+</div>
+<div class="section" id="build-smacc2">
+<h4>Build SMACC2<a class="headerlink" href="#build-smacc2" title="Permalink to this heading"></a></h4>
+<p>We’re going to create a new workspace, <code class="docutils literal notranslate"><span class="pre">smacc2_ws</span></code>, clone our SMACC2 branch into it, and build.
+<code class="docutils literal notranslate"><span class="pre">rosdep</span></code> will be used to get the dependency binaries for SMACC2 in your specific distribution.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/smacc2_ws/src
+<span class="nb">cd</span> ~/smacc2_ws/src
+git clone https://github.com/robosoft-ai/smacc2.git --branch &lt;ros2-distro&gt;-devel
+<span class="nb">cd</span> ~/smacc2_ws
+rosdep install -y -r -q --from-paths src --ignore-src --rosdistro &lt;ros2-distro&gt;
+colcon build --symlink-install
+</pre></div>
+</div>
+<p>Note: You need to change <code class="docutils literal notranslate"><span class="pre">--rosdistro</span></code> to the selected ROS 2 distribution name (e.g <code class="docutils literal notranslate"><span class="pre">foxy</span></code>, <code class="docutils literal notranslate"><span class="pre">galactic</span></code>).</p>
+</div>
+</div>
+<div class="content-collapse section" id="for-main-branch-development">
+<h3>For Main Branch Development<a class="headerlink" href="#for-main-branch-development" title="Permalink to this heading"></a></h3>
+<div class="section" id="build-ros-2-main">
+<h4>Build ROS 2 Main<a class="headerlink" href="#build-ros-2-main" title="Permalink to this heading"></a></h4>
+<p>Build or install ROS 2 <code class="docutils literal notranslate"><span class="pre">rolling</span></code> using the <a class="reference external" href="https://docs.ros.org/en/rolling/Installation/Ubuntu-Development-Setup.html">build instructions</a> provided in the ROS 2 documentation.
+All development is done using the <code class="docutils literal notranslate"><span class="pre">rolling</span></code> distribution on SMACC2’s <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and cherry-picked over to released distributions during syncs (if ABI compatible).</p>
+</div>
+<div class="section" id="build-smacc2-main">
+<h4>Build SMACC2 Main<a class="headerlink" href="#build-smacc2-main" title="Permalink to this heading"></a></h4>
+<p>Now that ROS 2 <code class="docutils literal notranslate"><span class="pre">rolling</span></code> is installed, we have to install our dependencies and build SMACC2 itself.
+We’ll create a new workspace, <code class="docutils literal notranslate"><span class="pre">smacc2_ws</span></code> and clone the SMACC2 project into it.
+Afterwards, we’ll use <code class="docutils literal notranslate"><span class="pre">rosdep</span></code> to automatically find and install our dependencies that were not included in the core ROS 2 install itself (<code class="docutils literal notranslate"><span class="pre">behaviortree.CPP</span></code>, <code class="docutils literal notranslate"><span class="pre">ompl</span></code>, etc).
+If you would like to use a custom version of any of these dependencies, simply overlay them in your <code class="docutils literal notranslate"><span class="pre">smacc2_ws</span></code> and it will use those rather than the binary installed versions.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/smacc2_ws/src
+<span class="nb">cd</span> ~/smacc2_ws/src
+git clone https://github.com/robosoft-ai/smacc2.git --branch main
+<span class="nb">cd</span> ~/smacc2_ws
+rosdep install -y -r -q --from-paths src --ignore-src --rosdistro rolling
+colcon build --symlink-install
+<span class="nb">source</span> install/setup.bash
+</pre></div>
+</div>
+<p>You are now ready for the demonstrations!</p>
+</div>
+</div>
+</div>
+<div class="section" id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this heading"></a></h2>
+<p>The official Dockerhub entries are primarily for use in the SMACC2 CI, but they may also be used for development. It is useful to have a docker image that tracks SMACC2 <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. The <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the root of the repository is recommended for production use, set to your distribution of choice.</p>
+<p>It is though generally recomended to install SMACC2 releases from the apt repository inside a container if you’d like to use our released binaries.</p>
+<div class="content-collapse section" id="building-docker-container">
+<h3>Building Docker Container<a class="headerlink" href="#building-docker-container" title="Permalink to this heading"></a></h3>
+<p>To build an image from the Dockerfile in the SMACC2 folder:
+First, clone the repo to your local system (or see Building the source above)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker build -t smacc2/latest .
+</pre></div>
+</div>
+<p>If proxies are needed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker build -t smacc2/latest --build-arg <span class="nv">http_proxy</span><span class="o">=</span>http://proxy.my.com:### --build-arg <span class="nv">https_proxy</span><span class="o">=</span>http://proxy.my.com:### .
+</pre></div>
+</div>
+<p>If you would like to build from dockerhub cache to speed up the build</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker pull robosoft/smacc2:main
+sudo docker build -t smacc2/latest --cache-from robosoft/smacc2:main .
+</pre></div>
+</div>
+</div>
+<div class="content-collapse section" id="using-dockerhub-container">
+<h3>Using DockerHub Container<a class="headerlink" href="#using-dockerhub-container" title="Permalink to this heading"></a></h3>
+<p>We allow for you to pull the latest docker image from the main branch at any time. As new releases and tags are made, docker containers on docker hub will be versioned as well to chose from.
+This docker image will not contain a built overlay, and you must build the overlay SMACC2 workspace yourself (see Build SMACC2 Main up above).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker pull robosoft-ai/smacc2:main
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="generate-doxygen">
+<h2>Generate Doxygen<a class="headerlink" href="#generate-doxygen" title="Permalink to this heading"></a></h2>
+<p>Run <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> in the root of the SMACC2 repository.
+It will generate a <code class="docutils literal notranslate"><span class="pre">/doc/*</span></code> directory containing the documentation.
+The documentation entrypoint in a browser is index.html.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="build_docs/build_troubleshooting_guide.html#build-troubleshooting-guide"><span class="std std-ref">Build Troubleshooting Guide</span></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<script type="text/javascript" src="../_static/tcs_theme.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+</body>
+</html>
