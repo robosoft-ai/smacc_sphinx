@@ -17,6 +17,8 @@ BUILDDIR      = _build
 DOC_TAG      ?= development
 RELEASE      ?= latest
 PUBLISHDIR    = /tmp/smacc2
+GITHUB_TOKEN  = None
+GITHUB_USER   = None
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -44,7 +46,8 @@ clean:
 # along with a README
 
 publish:
-	git clone --reference . https://github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
+	echo pulling doc from user $(GITHUB_USER)
+	git clone --reference . https://$(GITHUB_USER):$(GITHUB_TOKEN)@github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
 	cd $(PUBLISHDIR) && \
 	git checkout gh-pages && \
 	git config user.email "techsupport@robosoft.ai" && \
