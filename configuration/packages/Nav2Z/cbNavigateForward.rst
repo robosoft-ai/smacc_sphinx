@@ -1,13 +1,13 @@
 .. CbNavigateForward:
 
 CbNavigateForward
-==========================
+=================
 
 ``<CbNavigateForward>`` is the corresponding behavior name selected for this type.
 
 
 Configuration options
------------
+---------------------
 
 :``<CbNavigateForward>``.forwardDistance:
 

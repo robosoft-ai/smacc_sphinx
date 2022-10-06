@@ -1,15 +1,11 @@
 .. _simple_state_machine:
 
 Creating a simple state machine
-*************************
+*******************************
 
 - `Overview`_
 - `Requirements`_
 - `Tutorial Steps`_
-
-.. image:: images/smoothing_path.png
-    :width: 60%
-    :align: center
 
 Overview
 ========
