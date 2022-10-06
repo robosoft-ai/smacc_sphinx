@@ -1,7 +1,7 @@
 .. _simple_state_machine:
 
 Creating a simple state machine
-*************************
+*******************************
 
 - `Overview`_
 - `Requirements`_
