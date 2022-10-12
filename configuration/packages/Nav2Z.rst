@@ -1,6 +1,6 @@
 .. _configuring_nav2z:
 
-Configuration Guide
+Configuration Smacc Nav2Z
 ###################
 
 This guide provides a process through which the user can adjust the tunable parameters to obtain
