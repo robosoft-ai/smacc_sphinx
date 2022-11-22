@@ -1,1 +1,1 @@
-# SMACC2_Documentation_II
+# smacc2_sphinx
