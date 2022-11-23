@@ -16,10 +16,15 @@
 
 .wy-side-nav-search {
    width: 320px;
+   background-color: #000000
 }
 
 .wy-menu-vertical {
    width: 320px;
+}
+
+.wy-breadcrumbs li a {
+   color: black;
 }
 
 /* (temporarily) add an under development tagline to the bread crumb

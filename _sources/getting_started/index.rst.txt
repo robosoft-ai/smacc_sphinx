@@ -4,7 +4,7 @@ Getting Started
 ###############
 
 This document will take you through the process of installing the |PN| binaries
-and navigating a simulated Turtlebot 3 in the Gazebo simulator.
+and navigating a simulated Turtlebot 3 in the Gazebo simulator.-test
 
 .. note::
 
