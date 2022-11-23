@@ -1,9 +1,10 @@
-name: gh-pages generation
+name: check PR
 
 on: 
-   push:
-      branches:
-        - main
+  push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -27,7 +28,3 @@ jobs:
       - name: Building documentation
         run: |
           make html
-
-      - name: Publishing documentation to gh-pages
-        run: |
-          make GITHUB_USER=${{secrets.DOC_GITHUB_USER}} GITHUB_TOKEN=${{secrets.DOC_GITHUB_TOKEN}} publish
