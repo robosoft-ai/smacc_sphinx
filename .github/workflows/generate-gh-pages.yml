@@ -1,6 +1,9 @@
 name: gh-pages generation
 
-on: [push, pull_request]
+on: 
+   push:
+      branches:
+        - master
 
 jobs:
   test:
