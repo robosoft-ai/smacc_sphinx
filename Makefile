@@ -48,7 +48,7 @@ clean:
 publish:
 	echo pulling doc from user $(GITHUB_USER)
 	rm -Rf $(PUBLISHDIR)
-	git clone --reference . -b gh-pages https://$(GITHUB_USER):$(GITHUB_TOKEN)@github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
+	git clone -b gh-pages https://$(GITHUB_USER):$(GITHUB_TOKEN)@github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
 	cd $(PUBLISHDIR) && \
 	git config user.email "techsupport@robosoft.ai" && \
 	git config user.name "smacc2-ci"
