@@ -6,28 +6,20 @@ on:
         - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  generate:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
 
       - name: Setup Python
         uses: actions/setup-python@v4
-        # with:
-        #   python-version: 3.8
-
+    
       - name: Install dependencies with pip
         run: |
           export DEBIAN_FRONTEND=noninteractive
           sudo apt update
-          sudo apt install -y make doxygen graphviz ttf-dejavu openjdk-8-jre git openssh-server python3-pip python3
-          pip3 install sphinx==3.5.0 docutils sphinx_rtd_theme breathe==4.28.0 sphinxcontrib-plantuml jinja2==3.0.3
           pip install --no-warn-script-location --user --upgrade -r requirements.txt
-          
-      - name: Building documentation
-        run: |
-          make html
-
+    
       - name: Publishing documentation to gh-pages
         run: |
           make GITHUB_USER=${{secrets.DOC_GITHUB_USER}} GITHUB_TOKEN=${{secrets.DOC_GITHUB_TOKEN}} publish

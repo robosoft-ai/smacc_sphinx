@@ -7,15 +7,13 @@ on:
       - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  check_pr:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
 
       - name: Setup Python
         uses: actions/setup-python@v4
-        # with:
-        #   python-version: 3.8
 
       - name: Install dependencies with pip
         run: |
