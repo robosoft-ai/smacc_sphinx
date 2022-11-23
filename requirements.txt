@@ -8,3 +8,5 @@ sphinx-rtd-theme
 sphinx-sitemap
 sphinx-tabs
 breathe
+sphinxcontrib-plantuml
+jinja2
