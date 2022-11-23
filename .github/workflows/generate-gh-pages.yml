@@ -20,6 +20,10 @@ jobs:
           sudo apt update
           pip install --no-warn-script-location --user --upgrade -r requirements.txt
     
+      - name: Building documentation
+        run: |
+          make html
+
       - name: Publishing documentation to gh-pages
         run: |
           make GITHUB_USER=${{secrets.DOC_GITHUB_USER}} GITHUB_TOKEN=${{secrets.DOC_GITHUB_TOKEN}} publish
