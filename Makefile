@@ -47,14 +47,17 @@ clean:
 
 publish:
 	echo pulling doc from user $(GITHUB_USER)
-	#git clone --reference . https://$(GITHUB_USER):$(GITHUB_TOKEN)@github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
-	git clone https://github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
+	rm -Rf $(PUBLISHDIR)
+	git clone --reference . -b gh-pages https://$(GITHUB_USER):$(GITHUB_TOKEN)@github.com/robosoft-ai/SMACC2_Documentation_II.git $(PUBLISHDIR)
 	cd $(PUBLISHDIR) && \
-	git checkout gh-pages && \
 	git config user.email "techsupport@robosoft.ai" && \
 	git config user.name "smacc2-ci"
+
 	rm -fr $(PUBLISHDIR)/*
+
+	ls $(PUBLISHDIR)
 	cp -r $(BUILDDIR)/html/* $(PUBLISHDIR)
+	ls $(PUBLISHDIR)
 	cp scripts/.nojekyll $(PUBLISHDIR)/.nojekyll
 	cp scripts/CNAME $(PUBLISHDIR)/CNAME
 	cd $(PUBLISHDIR) && \
