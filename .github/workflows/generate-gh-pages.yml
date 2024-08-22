@@ -26,4 +26,4 @@ jobs:
 
       - name: Publishing documentation to gh-pages
         run: |
-          make GITHUB_USER=${{secrets.DOC_GITHUB_USER}} GITHUB_TOKEN=${{secrets.DOC_GITHUB_TOKEN}} publish
+          make GITHUB_USER=${{secrets.DOC_GITHUB_USER1}} GITHUB_TOKEN=${{secrets.DOC_GITHUB_TOKEN1}} publish
