@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Getting Started &mdash; SMACC 2 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+
+  
     <link rel="shortcut icon" href="../_static/smacc2_48x48.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,7 +17,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,15 +36,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> SMACC 2
-            <img src="../_static/smacc2_logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SMACC 2
+              <img src="../_static/smacc2_logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 latest
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -160,7 +168,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Getting Started</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -171,7 +179,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="getting-started">
-<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
 <p>This document will take you through the process of installing the SMACC2 binaries
 and navigating a simulated Turtlebot 3 in the Gazebo simulator.-test</p>
 <div class="admonition note">
@@ -180,27 +188,27 @@ and navigating a simulated Turtlebot 3 in the Gazebo simulator.-test</p>
 working with other types of robots.</p>
 </div>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Install the ROS 2 binary packages as described in the official docs</p></li>
 <li><p>Install the SMACC2 packages using your operating system’s package manager:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-&lt;ros2-distro&gt;-smacc2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-&lt;ros2-distro&gt;-smacc2
 </pre></div>
 </div>
 </li>
 </ol>
 </div>
 <div class="section" id="running-the-example">
-<h2>Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this headline"></a></h2>
+<h2>Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Start a terminal in your GUI</p></li>
 <li><p>Set key environment variables:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/&lt;ros2-distro&gt;/setup.bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/&lt;ros2-distro&gt;/setup.bash
 </pre></div>
 </div>
 </li>
 <li><p>In the same terminal, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch sm_atomic sm_atomic_launch.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>sm_atomic<span class="w"> </span>sm_atomic_launch.py
 </pre></div>
 </div>
 </li>
