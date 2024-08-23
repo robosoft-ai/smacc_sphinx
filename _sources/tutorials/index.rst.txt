@@ -3,7 +3,7 @@
 General Tutorials
 #################
 
-Smacc2 Tutorials
+SMACC2 Tutorials
 
 .. toctree::
    :maxdepth: 1
