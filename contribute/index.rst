@@ -22,7 +22,7 @@ Here, you can find the date and time of the SMACC working group meeting. Make su
 From this calendar, you can add yourself to the event so it will appear on your google calendar and get the event link to the call through Google Hangouts.
 We encourage everyone interested to come to the meeting to introduce yourself, your project, and see what everyone is working on.
 
-Further, `ROS Discourse <https://discourse.ros.org/>`_ is a good place to follow larger discussions happening in the community and announcements. This is **not** the correct place to post questions or ask for assistance. Please use the issues of the `SMACC2 Repo <https://github.com/robosoft-ai/SMACC2>`.
+Further, `ROS Discourse <https://discourse.ros.org/>`_ is a good place to follow larger discussions happening in the community and announcements. This is **not** the correct place to post questions or ask for assistance. Please use the issues of the `SMACC2 Repo <https://github.com/robosoft-ai/SMACC2>`_.
 
 
 Licensing
