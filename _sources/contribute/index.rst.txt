@@ -3,17 +3,7 @@
 Getting Involved
 ################
 
-As an open-source project, we welcome and encourage the community to
-submit patches directly to the repo |https://github.com/robosoft-ai/SMACC2|.
-
-This document explains how to participate in project conversations, log
-and track bugs and enhancement requests, and submit patches to the
-project so your patch will be accepted quickly in the codebase.
-
-Getting Involved
-****************
-
-If you're interested in getting involved with SMACC2, first of all, welcome!
+Thanks for your interest in getting involved with SMACC2!
 We encourage everyone to get involved from students, to junior developers, to senior developers, and executives.
 There's something to do for everyone from bug fixes, to feature development, new algorithms, and refactoring.
 
