@@ -30,10 +30,13 @@ architecture ...
 .. toctree::
    :hidden:
 
-   getting_started/index.rst
+  
    build_instructions/index.rst
    concepts/index.rst
+   mechanisms/index.rst
+   getting_started/index.rst
    tutorials/index.rst
    configuration/index.rst
+   SMACC2 Run Time Analyzer/index.rst
    contribute/index.rst
    about/index.rst
